@@ -7,7 +7,7 @@ class QuickFind
   end
 
   def connected?(p, q)
-    return self.id[p] == self.id[q]
+    self.id[p] == self.id[q]
   end
 
   def union(p,q)
