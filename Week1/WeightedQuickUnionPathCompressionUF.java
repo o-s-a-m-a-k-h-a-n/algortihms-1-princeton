@@ -1,8 +1,8 @@
-public class WeightedQuickUnionUF {
+public class WeightedQuickUnionPathCompressionUF {
   private int [] id;
   private int [] sz;
 
-  public WeightedQuickUnionUF(int N){
+  public WeightedQuickUnionPathCompressionUF(int N){
     id = new int[N];
     for (int i = 0; i<N; i++){
       id[i] = i;
@@ -12,6 +12,7 @@ public class WeightedQuickUnionUF {
 
   private int root(int i){
     while(i != id[i]){
+      id[i] = id[id[i]];
       i = id[i];
     }
     return i;
